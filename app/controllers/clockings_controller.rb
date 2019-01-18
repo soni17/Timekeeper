@@ -1,7 +1,7 @@
 class ClockingsController < ApplicationController
 
   def index
-
+    @logs = Clocking.all
   end
 
   def new

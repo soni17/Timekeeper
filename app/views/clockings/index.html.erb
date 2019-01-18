@@ -1,0 +1,31 @@
+<style>
+
+table tr td, table tr th{
+  border: 1px solid black;
+}
+table{
+  width:500px;
+  border-collapse: collapse;
+}
+
+</style>
+
+  <% if @logs %>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Clock Type</th>
+          <th>Time</th>
+        </tr>
+    <% @logs.each do |log| %>
+
+      <tr>
+        <td><%= log.name %></td>
+        <td><%= log.clock_type %></td>
+        <td><%= log.time %></td>
+      </tr>
+    <% end %>
+      </table>
+  <% else %>
+    <p>Logs are empty</p>
+<% end %>
