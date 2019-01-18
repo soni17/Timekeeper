@@ -19,12 +19,26 @@
         background-color: grey;
         color:white;
        }
+
+      #msg{
+        width:400px;
+        background-color:#ebebeb;
+        margin-bottom:30px;
+        }
     </style>
 
   </head>
 
   <body>
     <h1>Timekeeper</h1>
+
+    <% flash.each do |name,msg| %>
+      <div id="msg">
+        <a href="#" class="close" data-dismiss="alert">&#215;</a>
+        <%= content_tag :div, msg %>
+      </div>
+    <% end %>
+
     <%= link_to "View logs" , clockings_path%>
     <%= link_to "Clock in/out" , new_clocking_path %>
     <br/>
