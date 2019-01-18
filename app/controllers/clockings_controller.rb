@@ -2,6 +2,7 @@ class ClockingsController < ApplicationController
 
   def index
     @logs = Clocking.all
+    @logs = @logs.order(time: :desc)
   end
 
   def new
