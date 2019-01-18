@@ -4,12 +4,8 @@ class ClockingsController < ApplicationController
 
   end
 
-  def create
-
-  end
-
   def new
-    
+    @clocking = Clocking.new
   end
 
 end

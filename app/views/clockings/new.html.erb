@@ -1,0 +1,12 @@
+<%= form_for(@clocking) do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <br/>
+
+  <%= f.label :clock_type %>
+  <%= f.select :clock_type , options_for_select([['in'],['out']])%>
+  <br/>
+  <%= f.submit %>
+<% end %>
