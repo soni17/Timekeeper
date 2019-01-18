@@ -7,10 +7,28 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <style>
+      a{
+        text-decoration:none;
+        background-color:#ebebeb;
+        margin-right: 20px;
+        padding:5px;
+      }
+      a:hover{
+        background-color: grey;
+        color:white;
+       }
+    </style>
+
   </head>
 
   <body>
     <h1>Timekeeper</h1>
+    <%= link_to "View logs" , clockings_path%>
+    <%= link_to "Clock in/out" , new_clocking_path %>
+    <br/>
+    <br/>
     <%= yield %>
   </body>
 </html>
